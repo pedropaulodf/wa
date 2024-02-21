@@ -34,7 +34,7 @@
   text-align: center;
 }
 
-.wrapper button {
+.wrapper .btnwa {
   border: none;
   font-size: 1.3rem;
   border-radius: 7px;
@@ -46,6 +46,18 @@
   width: 100%;
 }
 
+.wrapper .btnweb {
+  border: none;
+  font-size: 1.3rem;
+  border-radius: 7px;
+  background-color: #0f557e;
+  color: white;
+  padding: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+  width: 100%;
+}
+
 .wrapper button:hover {
-  background-color: #0e7030;
+  filter: brightness(1.2);
 }

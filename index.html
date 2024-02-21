@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Simples página que ajuda a abrir um número de telefone qualquer no aplicativo do WhatApp, para evitar adicionar a pessoa na agenda.">
+  <meta name="description"
+    content="Simples página que ajuda a abrir um número de telefone qualquer no aplicativo do WhatApp, para evitar adicionar a pessoa na agenda.">
   <title>Abrir Número no WhatsApp</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -14,17 +15,18 @@
 
   <div class="wrapper">
     <p>Digite o número do Whatsapp:</p>
-    <input type="tel" id="telefone" placeholder="(34) 9 0000-0000" value="(34) " >
-    <button type="button" onclick="abrirWa()">Abrir WhatsApp</button>
+    <input type="tel" id="telefone" placeholder="(34) 9 0000-0000">
+    <button type="button" onclick="abrirWa()" class="btnwa">Abrir WhatsApp</button>
+    <button type="button" onclick="abrirWaWeb()" class="btnweb">Abrir WhatsApp Web</button>
   </div>
-  
+
   <script src="js/jquery-3.6.0.min.js"></script>
   <script src="js/jquery.mask.min.js"></script>
   <script src="js/script.js"></script>
   <script>
 
     $(document).ready(function () {
-      $('#telefone').mask('(00) 0 0000-0000');
+      $('#telefone').mask('(00) 0 0000-0000#####');
     });
 
   </script>
