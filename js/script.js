@@ -24,11 +24,12 @@ function abrirWaWeb() {
   //   return;
   // }
   window.open(
-    `https://web.whatsapp.com/send/?phone=+55${limpaCaracteresEspacosTelefone(
+    `https://web.whatsapp.com/send/?phone=%2B55${limpaCaracteresEspacosTelefone(
       iptTelefone.value
     )}&text&type=phone_number&app_absent=0`
   );
 }
+
 function limpaCaracteresEspacosTelefone(tel) {
   return tel.replace(/[^A-Z0-9]/gi, "");
 }
