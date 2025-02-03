@@ -50,3 +50,28 @@ input.addEventListener("keypress", function (event) {
     document.getElementById("btnweb").click();
   }
 });
+
+function isOnlyNumbers(str) {
+  // Remove todos os caracteres que não são números
+  let cleanedStr = str.replace(/[^0-9]/g, "");
+
+  // Verifica se a string resultante contém apenas números e não está vazia
+  return cleanedStr.length > 0 && /^[0-9]+$/.test(cleanedStr);
+}
+
+async function checkClipboard() {
+  try {
+    const clipboardText = await navigator.clipboard.readText();
+    const _clipboardText = clipboardText.replace(/[^0-9]/g, "");
+
+    if (isOnlyNumbers(clipboardText)) {
+      iptTelefone.value = $("#telefone").masked(_clipboardText);
+      document.getElementById("telefone").focus();
+    } else {
+    }
+  } catch (err) {
+    console.error("Erro ao acessar a área de transferência: ", err);
+  }
+}
+
+setTimeout(checkClipboard, 1000); // Verifica a área de transferência
